@@ -1,0 +1,14 @@
+table:
+  name: goods
+  schema: public
+select_permissions:
+  - role: guest
+    permission:
+      columns:
+        - price
+        - description
+        - image
+        - shortName
+        - title
+        - id
+      filter: {}

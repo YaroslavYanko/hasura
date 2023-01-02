@@ -1,0 +1,51 @@
+type Query {
+  adminGetMe: AdminGetMeOutput
+}
+
+type Query {
+  adminLogin(
+    admin: AdminLoginInput!
+  ): AdminLoginOutput
+}
+
+type Mutation {
+  adminRegister(
+    admin: AdminRegisterInput!
+  ): AdminRegisterOutput
+}
+
+type Query {
+  cloudinariSignature: CloudinariSignatureOutput
+}
+
+input AdminRegisterInput {
+  username: String!
+  password: String!
+}
+
+input AdminLoginInput {
+  username: String!
+  password: String!
+}
+
+type AdminRegisterOutput {
+  accessToken: String!
+}
+
+type AdminLoginOutput {
+  accessToken: String!
+}
+
+type AdminGetMeOutput {
+  id: String!
+  username: String!
+}
+
+type CloudinariSignatureOutput {
+  signature: String!
+  apiKey: String!
+  timestamp: Int!
+  cloudName: String!
+  publicId: String!
+}
+
