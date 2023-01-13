@@ -1,0 +1,13 @@
+table:
+  name: category
+  schema: public
+array_relationships:
+  - name: goods_items
+    using:
+      manual_configuration:
+        column_mapping:
+          id: category_id
+        insertion_order: null
+        remote_table:
+          name: goods
+          schema: public

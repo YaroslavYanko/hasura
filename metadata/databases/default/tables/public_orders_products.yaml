@@ -1,0 +1,13 @@
+table:
+  name: orders_products
+  schema: public
+object_relationships:
+  - name: item
+    using:
+      manual_configuration:
+        column_mapping:
+          products_id: id
+        insertion_order: null
+        remote_table:
+          name: goods
+          schema: public

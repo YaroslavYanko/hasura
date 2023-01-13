@@ -1,25 +1,21 @@
 table:
-  name: goods
+  name: categories
   schema: public
-object_relationships:
-  - name: category
+array_relationships:
+  - name: goods_items
     using:
       manual_configuration:
         column_mapping:
-          category_id: id
+          id: category_id
         insertion_order: null
         remote_table:
-          name: categories
+          name: goods
           schema: public
 select_permissions:
   - role: guest
     permission:
       columns:
-        - category_id
-        - description
         - id
-        - image
-        - price
-        - shortName
         - title
+        - slug
       filter: {}
