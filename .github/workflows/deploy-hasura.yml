@@ -14,5 +14,5 @@ jobs:
 
       - name: Deploy
         run: |
-          yarn hasura metadata apply --endpoint https://hasura.pizzastack.xyz/ --admin-secret ${{ secrets.HASURA_ADMIN_SECRET }}
-          yarn hasura migrate apply --endpoint https://hasura.pizzastack.xyz/ --admin-secret ${{ secrets.HASURA_ADMIN_SECRET }} --database-name default
+          yarn hasura metadata apply --endpoint https://hasura.tvoyapolychka.com.ua/ --admin-secret ${{ secrets.HASURA_ADMIN_SECRET }}
+          yarn hasura migrate apply --endpoint https://hasura.tvoyapolychka.com.ua/ --admin-secret ${{ secrets.HASURA_ADMIN_SECRET }} --database-name default
