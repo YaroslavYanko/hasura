@@ -35,6 +35,7 @@ services:
       HASURA_ACTIONS_ENDPOINT: http://host.docker.internal:8888/.netlify/functions
       HASURA_TVOYAPOLYCHKA_SECRET: mytvoyapolychkasecretkey
       HASURA_FAKE_ORDER_FORCE_CREATE: 'true'
+      HASURA_EVENT_WEBHOOK_HANDLER: 'http://host.docker.internal:8888/.netlify/functions/hasura-webhook'
 volumes:
   db_data:
 

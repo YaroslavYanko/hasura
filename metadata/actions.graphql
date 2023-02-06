@@ -18,6 +18,24 @@ type Query {
   cloudinariSignature: CloudinariSignatureOutput
 }
 
+type Mutation {
+  createOrder(
+    order: CreateOrderInput!
+  ): CreateOrderOutput
+}
+
+type Query {
+  customerLogin(
+    input: CustomerLoginInput!
+  ): CustomerLoginOutput
+}
+
+type Query {
+  customerVerifyCode(
+    input: CustomerVerifyCodeInput!
+  ): CustomerVerifyCodeOutput
+}
+
 input AdminRegisterInput {
   username: String!
   password: String!
@@ -26,6 +44,25 @@ input AdminRegisterInput {
 input AdminLoginInput {
   username: String!
   password: String!
+}
+
+input CustomerLoginInput {
+  phoneNumber: String!
+}
+
+input CustomerVerifyCodeInput {
+  phoneNumber: String!
+  code: String!
+}
+
+input CreateOrderInput {
+  client_adress: String!
+  client_name: String!
+  client_phone: String!
+  client_surname: String!
+  comment: String
+  payment_type: String
+  items: String!
 }
 
 type AdminRegisterOutput {
@@ -47,5 +84,17 @@ type CloudinariSignatureOutput {
   timestamp: Int!
   cloudName: String!
   publicId: String!
+}
+
+type CustomerLoginOutput {
+  status: String!
+}
+
+type CustomerVerifyCodeOutput {
+  accessToken: String!
+}
+
+type CreateOrderOutput {
+  id: String!
 }
 
