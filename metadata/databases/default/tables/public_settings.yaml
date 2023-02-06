@@ -7,3 +7,9 @@ select_permissions:
       columns:
         - masks_category
       filter: {}
+  - role: user
+    permission:
+      columns:
+        - id
+        - masks_category
+      filter: {}
